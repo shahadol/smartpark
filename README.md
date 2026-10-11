@@ -1,17 +1,29 @@
-# smartpark
+# SmartPark
 
-A new Flutter project.
+Parking finder app with check-in / check-out, built with Flutter and Firebase.
 
-## Getting Started
+Originally a group HCI project (Qassim University, IT215): survey, wireframes,
+Figma prototype and Think-Aloud usability testing. This repository is my
+individual implementation of that design.
 
-This project is a starting point for a Flutter application.
+## Features
+- Email/password authentication (Firebase Auth)
+- Editable profile saved per user (Cloud Firestore)
+- Parking categories: University, Mall, Hospital
+- Real-time spot status shared across users
+- Check-in with transaction (prevents double booking)
+- Live timer and cost calculation, check-out with confirmation dialog
+- Saved payment methods (demo, last 4 digits only) and notification settings
 
-A few resources to get you started if this is your first Flutter project:
+## Tech
+Flutter (web), Firebase Authentication, Cloud Firestore
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Run
+flutter pub get
+flutter run -d chrome
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Note: add your own Firebase config in lib/firebase_options.dart.
+
+## Not implemented yet
+Real map and navigation, push notifications, real payments, Android build.
+
